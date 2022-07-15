@@ -25,7 +25,7 @@ class AlunoModel extends Model
     public function getAllAlunos()
     {
         return DB::table('aluno')->get();
-        //return $this->belongsTo(Alunos::class, 'matricula');
+      
     }
 
     public function getAlunoPorId($id)

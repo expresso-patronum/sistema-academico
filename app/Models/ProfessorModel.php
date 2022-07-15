@@ -24,7 +24,7 @@ class ProfessorModel extends Model
     public function getProfessores()
     {
         return DB::table('professor')->get();
-        //return $this->belongsTo(Alunos::class, 'matricula');
+  
     }
 }
 

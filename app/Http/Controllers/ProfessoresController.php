@@ -14,16 +14,12 @@ class ProfessoresController extends Controller
 
    public function perfilProfessores()
    {
-     /* $professormodel = new ProfessorModel();
-      $data['all'] = $professormodel->get();
-      $data['professores'] = $data['all'];
-      return view('perfilProfessores', $data);*/
 
       $professormodel = new ProfessorModel();
-      //$disciplinamodel = new DisciplinaModel();
+
       $profdiscmodel = new ProfDiscModel();
 
-      //$data['disciplinas'] = $profdiscmodel->getDiscsFromProf($id);
+
 
       return view ('perfilProfessores');
 
@@ -33,7 +29,7 @@ class ProfessoresController extends Controller
    {
       $disciplinamodel = new DisciplinaModel;
       $data =  $disciplinamodel->getDisciplinas();
-      //var_dump($disciplinas[0]->nome);
+
      
       return view('cadastroProfessor', ['disciplinas'=>$data]);
    }

@@ -29,7 +29,7 @@ class AlunosController extends Controller
       $alunodiscmodel = new AlunoDiscModel;
       $data2 =  $alunodiscmodel ->getDiscsFromAluno($data['matricula']);
       $dataAluno = $alunodiscmodel->getDados($data['matricula']);
-     // var_dump($dataAluno);
+
       return view('perfilAluno', ['disciplinas'=>$dataAluno]);
    }
 
@@ -37,7 +37,7 @@ class AlunosController extends Controller
    {
       $disciplinamodel = new DisciplinaModel;
       $data =  $disciplinamodel->getDisciplinas();
-      //var_dump($disciplinas[0]->nome);
+
      
       return view('cadastroAluno', ['disciplinas'=>$data]);
    }
@@ -57,20 +57,6 @@ class AlunosController extends Controller
     );
 
    $id = $alunomodel->insertGetId($data);
-  
-    //$alunodiscmodel = new AlunoDiscModel;
-
-/*
-    for($i = 0; $i < count($request->disciplinas); $i++) {
-      $data2 = array(
-         'aluno' => intval($id),
-         'disciplina'=> intval($request->disciplinas[$i]),
-      );
-
-*/
-
-   
-    //  $alunodiscmodel->insert($data2);
 
     return redirect('/cadastroAluno');
 

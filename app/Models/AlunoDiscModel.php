@@ -14,7 +14,7 @@ class AlunoDiscModel extends Model
         'mediaFinal',
         'frequencia'
     ];
-   // public $timestamps = false;
+
     protected $table = 'alunodisciplina';
 
     public function insertAlunoDisc($data)
